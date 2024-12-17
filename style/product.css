@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #1f2937, #4b5563);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1f2937;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  width: 70px;
+  height: 60px;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  min-width: 80px;
+  max-width: 150px;
+  height: 20px;
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+}
+/* Hero Section Styling */
+.product {
+  margin: 2rem auto;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Agar card turun ke bawah */
+  gap: 1.5rem; /* Jarak antar card */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #1f2937, #4b5563);
+  max-width: 1200px;
+}
+
+.product-items {
+  flex: 0 0 calc(33.333% - 1.5rem); /* 3 card per baris dengan gap */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-items img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Menjaga gambar tetap proporsional */
+  border-radius: 8px 8px 0 0;
+}
+
+.product-items h1 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.product-items p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.product-items a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #4ade80;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.product-items a:hover {
+  background-color: #3b8c5e;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.footer-item {
+  flex: 1;
+  padding: 1rem;
+  text-align: left;
+}
+
+.footer-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-item p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.social-link {
+  display: inline-block;
+  margin-right: 0.5rem;
+  color: #4ade80;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    min-width: 50px;
+    max-width: 80px;
+  }
+
+  .logo {
+    width: 50px;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .product-items {
+    flex: 0 0 calc(50% - 1.5rem); /* 2 card per baris */
+  }
+}
+
+/* Responsivitas untuk Mobile (1 card per baris) */
+@media (max-width: 480px) {
+  .product-items {
+    flex: 0 0 calc(100% - 1.5rem); /* 1 card per baris */
+  }
+}
